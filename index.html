@@ -13,30 +13,34 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: orangered; }
+    .elemento-gris {
+      margin:0;
+      padding: 20px;
+    }
   </style>
 
 <div class="navbar px-44">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl font-family: 'Kumbh Sans', sans-serif;">SNEAKERS</a>
-    <a class="btn btn-ghost text-sm text-gray-400">Collections</a>
-    <a class="btn btn-ghost text-sm text-gray-400">Men</a>
-    <a class="btn btn-ghost text-sm text-gray-400">Women</a>
-    <a class="btn btn-ghost text-sm text-gray-400">About</a>
-    <a class="btn btn-ghost text-sm text-gray-400">Contact</a>
+    <a class="text-xl btn btn-ghost font-family: 'Kumbh Sans', sans-serif; font-extrabold">SNEAKERS</a>
+    <a class="text-sm text-gray-400 btn btn-ghost">Collections</a>
+    <a class="text-sm text-gray-400 btn btn-ghost">Men</a>
+    <a class="text-sm text-gray-400 btn btn-ghost">Women</a>
+    <a class="text-sm text-gray-400 btn btn-ghost">About</a>
+    <a class="text-sm text-gray-400 btn btn-ghost">Contact</a>
   </div>
   <div class="flex-none">
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
         <div class="indicator">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          <span class="badge badge-sm indicator-item">8</span>
+          <img src="assets/images/icon-cart.svg" class="w-5 h-5"/>
+          <span class="hidden bg-orange-500 badge badge-sm indicator-item"></span>
         </div>
       </div>
       <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
         <div class="card-body">
-          <span class="font-bold text-lg">Cart</span>
+          <span class="text-lg font-bold">Cart</span>
           <hr>
-          <span class="font-bold text-lg m-auto justify-center align-middle">Your cart is empty.</span>
+          <span class="justify-center m-auto text-lg font-bold align-middle">Your cart is empty.</span>
         </div>
       </div>
     </div>
@@ -59,40 +63,44 @@
     </div>
   </div>
 </div>
-<hr class="max-w-5xl m-auto justify-center">
+<hr class="justify-center max-w-5xl m-auto">
 </head>
 <body>
   <div class="min-h-screen m-auto">
-    <div class="hero-content flex-col lg:flex-row">
-      <div class="py-12 px-12">
-        <img src="assets/images/image-product-1.jpg" class="max-w-96 max-h-xl rounded-xl mb-4" >
+    <div class="flex-col hero-content lg:flex-row">
+      <div class="px-12 py-12">
+        <img src="assets/images/image-product-1.jpg" class="mb-4 max-w-96 max-h-xl rounded-xl" >
       <div class="flex">
-        <img src="assets/images/image-product-1-thumbnail.jpg" class="w-24 h-20 rounded-xl pr-2">
-        <img src="assets/images/image-product-2-thumbnail.jpg" class="w-24 h-20 rounded-xl px-2">
-        <img src="assets/images/image-product-3-thumbnail.jpg" class="w-24 h-20 rounded-xl px-2">
-        <img src="assets/images/image-product-4-thumbnail.jpg" class="w-24 h-20 rounded-xl pl-2">
+        <img src="assets/images/image-product-1-thumbnail.jpg" class="w-24 h-20 pr-2 rounded-xl">
+        <img src="assets/images/image-product-2-thumbnail.jpg" class="w-24 h-20 px-2 rounded-xl">
+        <img src="assets/images/image-product-3-thumbnail.jpg" class="w-24 h-20 px-2 rounded-xl">
+        <img src="assets/images/image-product-4-thumbnail.jpg" class="w-24 h-20 pl-2 rounded-xl">
       </div>
       </div>
       
-      <div>
-        <span class="text-orange-500 font-bold">Sneaker Company</span>
-        <h1 class="text-5xl font-semibold py-2">Fall Limited Edition <br> Sneakers</h1>
+      <div class="mr-8 mt-14">
+        <span class="font-bold text-orange-500">Sneaker Company</span>
+        <h1 class="py-2 text-5xl font-semibold">Fall Limited Edition <br> Sneakers</h1>
         <p class="py-6">These low-profile sneakers are your perfect casual wear<br> companion. Featuring a 
           durable rubber outer sole, they’ll<br> withstand everything the weather can offer.</p>
-        <div class="flex">
-        <h2 class="font-semibold text-3xl">$125.00</h2>
-        <div class="input-bordered w-8 h-6 bg-orange-200 text-orange-500 rounded-sm">50%</div>
+        <div class="flex m-auto">
+        <h2 class="text-3xl font-semibold">$125.00</h2>
+        <div class="mt-2 ml-4 text-orange-500 bg-orange-200 badge">50%</div>
         </div>
         <p class="text-gray-400 line-through">$250.00</p>
-      <div class="py-12">
-        <button class="btn btn-primary shadow-2xl bg-orange-500 w-64 text-white"><img src="assets/images/icon-cart.svg">Add to cart</button>
+      <div class="flex justify-around py-12 m-0">
+        <input type="button" id="btnRestar" value="-" class="text-xl font-extrabold text-orange-500 bg-gray-100 elemento-gris"/>
+        <p id="msgContador" class="mt-2 bg-gray-100 elemento-gris">0</p>
+        <input type="button" id="btnSumar" value="+" class="text-xl font-extrabold text-orange-500 bg-gray-100 elemento-gris"/>
+        <button class="w-64 mt-4 ml-4 text-white bg-orange-500 shadow-xl btn"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fill-rule="nonzero"/></svg>Add to cart</button>
       </div>
       </div>
     </div>
   </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Jefrey Poveda</a>.
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
