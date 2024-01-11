@@ -6,6 +6,7 @@
   <link href="assets/css/styles.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,9 +15,9 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 
-<div class="navbar">
+<div class="navbar px-44">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl">SNEAKERS</a>
+    <a class="btn btn-ghost text-xl font-family: 'Kumbh Sans', sans-serif;">SNEAKERS</a>
     <a class="btn btn-ghost text-sm text-gray-400">Collections</a>
     <a class="btn btn-ghost text-sm text-gray-400">Men</a>
     <a class="btn btn-ghost text-sm text-gray-400">Women</a>
@@ -60,26 +61,28 @@
     </div>
   </div>
 </div>
+<hr class="max-w-5xl m-auto justify-center">
 </head>
 <body>
-
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
+  <div class="min-h-screen m-auto">
+    <div class="hero-content flex-col lg:flex-row">
+      <img src="assets/images/image-product-1.jpg" class="max-w-96 max-h-xl rounded-xl" >
+      <div>
+        <span class="text-orange-500 font-bold">Sneaker Company</span>
+        <h1 class="text-5xl font-semibold">Fall Limited Edition Sneakers</h1>
+        <p class="py-6">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="flex">
+        <h2 class="font-semibold text-3xl">$125.00</h2>
+        <div class="input-bordered w-8 h-6 bg-orange-200 text-orange-500 rounded-sm">50%</div>
+        </div>
+        <p class="text-gray-400 line-through">$250.00</p>
+      <div>
+        <button class="btn btn-primary shadow-2xl bg-orange-500">Add to cart</button>
+      </div>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Jefrey Poveda</a>.
