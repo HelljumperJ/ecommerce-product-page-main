@@ -12,7 +12,7 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: orangered; }
   </style>
 
 <div class="navbar px-44">
@@ -66,19 +66,28 @@
 <body>
   <div class="min-h-screen m-auto">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="assets/images/image-product-1.jpg" class="max-w-96 max-h-xl rounded-xl" >
+      <div class="py-12 px-12">
+        <img src="assets/images/image-product-1.jpg" class="max-w-96 max-h-xl rounded-xl mb-4" >
+      <div class="flex">
+        <img src="assets/images/image-product-1-thumbnail.jpg" class="w-24 h-20 rounded-xl pr-2">
+        <img src="assets/images/image-product-2-thumbnail.jpg" class="w-24 h-20 rounded-xl px-2">
+        <img src="assets/images/image-product-3-thumbnail.jpg" class="w-24 h-20 rounded-xl px-2">
+        <img src="assets/images/image-product-4-thumbnail.jpg" class="w-24 h-20 rounded-xl pl-2">
+      </div>
+      </div>
+      
       <div>
         <span class="text-orange-500 font-bold">Sneaker Company</span>
-        <h1 class="text-5xl font-semibold">Fall Limited Edition Sneakers</h1>
-        <p class="py-6">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <h1 class="text-5xl font-semibold py-2">Fall Limited Edition <br> Sneakers</h1>
+        <p class="py-6">These low-profile sneakers are your perfect casual wear<br> companion. Featuring a 
+          durable rubber outer sole, they’ll<br> withstand everything the weather can offer.</p>
         <div class="flex">
         <h2 class="font-semibold text-3xl">$125.00</h2>
         <div class="input-bordered w-8 h-6 bg-orange-200 text-orange-500 rounded-sm">50%</div>
         </div>
         <p class="text-gray-400 line-through">$250.00</p>
-      <div>
-        <button class="btn btn-primary shadow-2xl bg-orange-500">Add to cart</button>
+      <div class="py-12">
+        <button class="btn btn-primary shadow-2xl bg-orange-500 w-64 text-white"><img src="assets/images/icon-cart.svg">Add to cart</button>
       </div>
       </div>
     </div>
