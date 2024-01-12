@@ -38,6 +38,6 @@ let allProducts = []
 
 productsList.addEventListener('click', e => {
     if (e.target.classList.contains("btn-add-cart")) {
-        console.log(e.target('info-product'))
+
     }
 })
