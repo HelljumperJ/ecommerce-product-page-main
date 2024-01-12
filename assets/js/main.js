@@ -27,5 +27,17 @@ function evaluar(){
 }
 evaluar()
 
+// ================================== //
+
+const cartInfo = document.querySelector("#cart-product")
+const rowProduct = document.querySelector("#row-product")
 
 
+const productsList = document.querySelector("#container-items")
+let allProducts = []
+
+productsList.addEventListener('click', e => {
+    if (e.target.classList.contains("btn-add-cart")) {
+        console.log(e.target('info-product'))
+    }
+})
